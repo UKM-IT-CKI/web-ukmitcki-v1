@@ -1,0 +1,38 @@
+import React from 'react';
+import Img from '../assets/Img/Pic 1.JPG'
+
+export default function HeroSection() {
+  return (
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-blue-900">
+      <div className="absolute inset-0 opacity-40">
+        <img
+          src={Img}
+          alt="Background Hero"
+          className="w-full h-full object-cover"
+        />
+      </div>
+      <div className="absolute inset-0 bg-linear-to-b from-blue-900/70 to-blue-900/75"></div>
+
+      <div className="container mx-auto px-6 relative z-10 text-center text-white">
+        {/* <span className="inline-block py-1 px-3 rounded-full bg-blue-500/30 border border-blue-400/50 text-sm font-medium mb-6 backdrop-blur-sm">
+          Selamat Datang Mahasiswa Baru 2025
+        </span> */}
+
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Wujudkan Inovasi & Kreativitas <br /> Bersama <span className="text-blue-400">UKM IT</span>
+        </h1>
+        <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Komunitas pengembangan minat dan bakat mahasiswa di bidang Teknologi Informasi dan Inovasi Digital
+        </p>
+        <div className="flex flex-col md:flex-row justify-center gap-4">
+          <a href="#join" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-blue-500/30">
+            Daftar Sekarang
+          </a>
+          <a href="#about" className="bg-transparent border border-white/30 hover:bg-white/10 text-white px-8 py-3 rounded-full font-semibold transition-all">
+            Pelajari Lebih Lanjut
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
