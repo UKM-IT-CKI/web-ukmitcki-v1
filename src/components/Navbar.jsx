@@ -23,6 +23,19 @@ export default function Navbar() {
     { name: 'Gabung', href: '#join' },
   ];
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
@@ -40,7 +53,8 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className={`font-medium hover:text-blue-500 transition-colors ${scrolled ? 'text-gray-600' : 'text-gray-200'}`}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className={`font-medium hover:text-blue-500 transition-colors cursor-pointer ${scrolled ? 'text-gray-600' : 'text-gray-200'}`}
             >
               {link.name}
             </a>
@@ -64,8 +78,11 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-gray-600 font-medium hover:text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-all"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={(e) => {
+                  handleNavClick(e, link.href);
+                  setIsMenuOpen(false);
+                }}
+                className="text-gray-600 font-medium hover:text-blue-600 hover:bg-blue-50 p-2 rounded-lg transition-all cursor-pointer"
               >
                 {link.name}
               </a>
