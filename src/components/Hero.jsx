@@ -2,6 +2,19 @@ import React from 'react';
 import Img from '../assets/Img/Pic 1.jpg'
 
 export default function HeroSection() {
+  const handleNavClick = (e, href) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-blue-900">
       <div className="absolute inset-0 opacity-40">
@@ -25,10 +38,18 @@ export default function HeroSection() {
           Komunitas pengembangan minat dan bakat mahasiswa di bidang Teknologi Informasi dan Inovasi Digital
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
-          <a href="#join" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-blue-500/30">
+          <a
+            href="#join"
+            onClick={(e) => handleNavClick(e, '#join')}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-blue-500/30 cursor-pointer"
+          >
             Daftar Sekarang
           </a>
-          <a href="#about" className="bg-transparent border border-white/30 hover:bg-white/10 text-white px-8 py-3 rounded-full font-semibold transition-all">
+          <a
+            href="#about"
+            onClick={(e) => handleNavClick(e, '#about')}
+            className="bg-transparent border border-white/30 hover:bg-white/10 text-white px-8 py-3 rounded-full font-semibold transition-all cursor-pointer"
+          >
             Pelajari Lebih Lanjut
           </a>
         </div>

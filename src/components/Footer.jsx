@@ -3,6 +3,19 @@ import { Globe, MapPin, Mail, Instagram, Github } from 'lucide-react';
 import Img from '../assets/Img/Logo_UKMIT.png'
 
 export default function Footer() {
+    const handleNavClick = (e, href) => {
+        e.preventDefault();
+        const targetId = href.replace('#', '');
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <footer className="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
             <div className="container mx-auto px-6">
@@ -17,10 +30,42 @@ export default function Footer() {
                     <div>
                         <h4 className="text-white font-bold mb-4">Tautan</h4>
                         <ul className="space-y-2 text-sm">
-                            <li><a href="#home" className="hover:text-blue-500 transition-colors">Beranda</a></li>
-                            <li><a href="#about" className="hover:text-blue-500 transition-colors">Tentang Kami</a></li>
-                            <li><a href="#Project" className="hover:text-blue-500 transition-colors">Project</a></li>
-                            <li><a href="#activities" className="hover:text-blue-500 transition-colors">Kegiatan</a></li>
+                            <li>
+                                <a
+                                    href="#home"
+                                    onClick={(e) => handleNavClick(e, '#home')}
+                                    className="hover:text-blue-500 transition-colors cursor-pointer"
+                                >
+                                    Beranda
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#about"
+                                    onClick={(e) => handleNavClick(e, '#about')}
+                                    className="hover:text-blue-500 transition-colors cursor-pointer"
+                                >
+                                    Tentang Kami
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#Project"
+                                    onClick={(e) => handleNavClick(e, '#Project')}
+                                    className="hover:text-blue-500 transition-colors cursor-pointer"
+                                >
+                                    Project
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="#activities"
+                                    onClick={(e) => handleNavClick(e, '#activities')}
+                                    className="hover:text-blue-500 transition-colors cursor-pointer"
+                                >
+                                    Kegiatan
+                                </a>
+                            </li>
                         </ul>
                     </div>
 
