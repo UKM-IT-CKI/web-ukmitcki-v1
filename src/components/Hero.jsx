@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from '../assets/Img/Pic 1.JPG'
+import Img from '../assets/Img/Pic 1.jpg'
 
 export default function HeroSection() {
   return (
