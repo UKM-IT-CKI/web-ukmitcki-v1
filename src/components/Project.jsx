@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
-import { Github, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Github, ChevronLeft, ChevronRight, Link } from 'lucide-react';
 import Project1 from '../assets/Img/Project1.png';
 import Project2 from '../assets/Img/Project2.png';
 import Maintence from '../assets/Img/under_maintenance.png';
 
 // --- KOMPONEN KARTU PROYEK ---
-const ProjectCard = ({ image, title, category, description, githubUrl }) => (
+const ProjectCard = ({ image, title, category, description, githubUrl, linkUrl }) => (
   // min-w-[300px] agar kartu punya lebar tetap saat di-scroll
   <div className="min-w-[300px] md:min-w-[380px] snap-center group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl border border-gray-100 transition-all duration-300">
 
@@ -23,11 +23,21 @@ const ProjectCard = ({ image, title, category, description, githubUrl }) => (
           href={githubUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-white p-3 rounded-full text-gray-900 shadow-lg hover:scale-110 transition-transform duration-300"
+          className="bg-white p-3 ml-0 rounded-full text-gray-900 shadow-lg hover:scale-110 transition-transform duration-300"
         >
           <Github size={24} />
         </a>
+
+        <a
+          href={linkUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-white p-3 ml-2 rounded-full text-gray-900 shadow-lg hover:scale-110 transition-transform duration-300"
+        >
+          <Link size={24} />
+        </a>
       </div>
+
 
       {/* Badge Kategori */}
       <div className="absolute top-3 left-3 bg-white/90 backdrop-blur text-blue-700 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
@@ -52,7 +62,7 @@ export default function Showcase() {
   const scroll = (direction) => {
     if (scrollRef.current) {
       const { current } = scrollRef;
-      const scrollAmount = 400; // Jarak scroll
+      const scrollAmount = 400;
       if (direction === 'left') {
         current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
       } else {
@@ -67,28 +77,32 @@ export default function Showcase() {
       category: "Web Application",
       title: "Fun Photobooth",
       description: "Aplikasi web interaktif untuk membuat foto strip bergaya photobox langsung dari browser.",
-      githubUrl: "https://github.com/UKM-IT-CKI/Photobooth"
+      githubUrl: "https://github.com/UKM-IT-CKI/Photobooth",
+      linkUrl: "https://ukmitphotoboothproject.vercel.app/"
     },
     {
       image: Project2,
       category: "Computer Vision",
       title: "Finger Counter",
       description: "Program berbasis web mendeteksi gerakan tangan lalu menghitung jumlah jari, dan memberikan umpan balik audio secara langsung.",
-      githubUrl: "https://github.com/UKM-IT-CKI/Finger-Counter.git"
+      githubUrl: "https://github.com/UKM-IT-CKI/Finger-Counter.git",
+      linkUrl: "https://ukmit-finger-counter.streamlit.app/"
     },
     {
       image: Maintence,
       category: "Coming Soon",
       title: "On Progress",
       description: "Coming Soon",
-      githubUrl: "#"
+      githubUrl: "#",
+      linkUrl: ""
     },
     {
       image: Maintence,
       category: "Coming Soon",
       title: "On Progress",
       description: "Coming Soon",
-      githubUrl: "#"
+      githubUrl: "#",
+      linkUrl: ""
     },
   ];
 

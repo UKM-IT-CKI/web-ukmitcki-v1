@@ -1,74 +1,119 @@
-# UKM IT CKI - Website Resmi
+<div align="center">
 
-Website resmi Unit Kegiatan Mahasiswa Teknologi Informasi (UKM IT) CKI.
+# 🚀 Website UKM IT CKI
+
+### Unit Kegiatan Mahasiswa Teknologi Informasi
+
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.4.11-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.17-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
+
+**Membangun masa depan teknologi melalui kolaborasi mahasiswa yang kreatif dan inovatif.**
+
+[🌐 Live Demo](#) • [📖 Documentation](#) • [🐛 Report Bug](https://github.com/UKM-IT-CKI/ukm-website/issues) • [✨ Request Feature](https://github.com/UKM-IT-CKI/ukm-website/issues)
+
+</div>
+
+---
+
+## 📋 Tentang Proyek
+
+Website resmi Unit Kegiatan Mahasiswa Teknologi Informasi (UKM IT) STIKOM CKI Jakarta. Platform ini dirancang untuk memberikan informasi tentang kegiatan, project, dan cara bergabung dengan UKM IT.
 
 ## 🚀 Tech Stack
 
-- **React** - Library JavaScript untuk membangun UI
-- **Vite** - Build tool yang cepat dan modern
-- **Tailwind CSS** - Framework CSS utility-first
-- **Lucide React** - Icon library
+<table>
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" />
+      <br>React
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vite" width="48" height="48" alt="Vite" />
+      <br>Vite
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind" />
+      <br>Tailwind CSS
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=javascript" width="48" height="48" alt="JavaScript" />
+      <br>JavaScript
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vercel" width="48" height="48" alt="Vercel" />
+      <br>Vercel
+    </td>
+  </tr>
+</table>
 
-## 📦 Instalasi
+## ✨ Fitur
 
-```bash
-# Install dependencies
-npm install
+- 🎨 **Modern Design** - UI/UX yang modern dan menarik
+- 📱 **Responsive** - Tampilan optimal di semua perangkat
+- ⚡ **Fast Loading** - Optimasi performa dengan Vite
+- 🎭 **Smooth Animations** - Animasi yang halus dan interaktif
+- 📝 **WhatsApp Integration** - Form pendaftaran terintegrasi dengan WhatsApp
+- 🖼️ **Activity Gallery** - Galeri kegiatan dengan marquee animation
+- 🌐 **SEO Optimized** - Optimasi untuk mesin pencari
 
-# Run development server
-npm run dev
+## 🌐 Demo
 
-# Build untuk production
-npm run build
+Kunjungi website kami di: **[ukm-it-cki.vercel.app](#)** _(ganti dengan URL deployment Anda)_
 
-# Preview production build
-npm run preview
-```
 
-## 🌐 Deploy ke Vercel
+### 🐛 Melaporkan Bug
 
-### Persiapan
+Jika Anda menemukan bug, silakan buat [issue baru](https://github.com/UKM-IT-CKI/ukm-website/issues) dengan:
+- Jelaskan deskripsi bug
+- Screenshot (jika memungkinkan)
+- Environment details (browser, OS, dll)
 
-1. **Push ke GitHub**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin <URL_REPOSITORY_GITHUB>
-   git push -u origin main
-   ```
+## 📞 Kontak & Social Media
 
-2. **Deploy di Vercel**
-   - Buka [vercel.com](https://vercel.com)
-   - Login dengan akun GitHub
-   - Klik "Add New Project"
-   - Import repository GitHub kamu
-   - Vercel akan otomatis mendeteksi Vite configuration
-   - Klik "Deploy"
+<div align="center">
 
-### Build Settings (Otomatis terdeteksi)
+### 📍 Alamat
+**Jalan Radin Inten II, Duren Sawit, Jakarta Timur**
 
-- **Framework Preset**: Vite
-- **Build Command**: `npm run build`
-- **Output Directory**: `dist`
-- **Install Command**: `npm install`
+### 📧 Email
+**ukmitcki2025@gmail.com**
 
+### 🌐 Social Media
+
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ukm.it_stikom/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/UKM-IT-CKI)
+[![Website](https://img.shields.io/badge/Website-4285F4?style=for-the-badge&logo=google-chrome&logoColor=white)](https://official.stikomcki.ac.id/)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ukmitcki2025@gmail.com)
+
+</div>
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
 ## 📁 Struktur Proyek
 
 ```
+
 ukm-website/
 ├── public/              # Static assets
 ├── src/
 │   ├── assets/         # Images dan media
+│   │   └── Img/        # Logo dan gambar
 │   ├── components/     # React components
-│   │   ├── About.jsx
-│   │   ├── Activities.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Hero.jsx
-│   │   ├── JoinForm.jsx
-│   │   ├── Navbar.jsx
-│   │   └── Project.jsx
+│   │   ├── About.jsx          # Section tentang UKM IT
+│   │   ├── Activities.jsx     # Galeri kegiatan
+│   │   ├── Footer.jsx         # Footer section
+│   │   ├── Hero.jsx           # Landing section
+│   │   ├── JoinForm.jsx       # Form pendaftaran
+│   │   ├── Navbar.jsx         # Navigation bar
+│   │   └── Project.jsx        # Project section
 │   ├── App.jsx         # Main app component
 │   ├── main.jsx        # Entry point
 │   └── index.css       # Global styles
@@ -79,11 +124,12 @@ ukm-website/
 └── vercel.json         # Vercel deployment config
 ```
 
-## ✨ Fitur
+<div align="center">
 
-- 🎨 Modern dan responsive design
-- 📱 Mobile-friendly
-- ⚡ Fast loading dengan Vite
-- 🎭 Smooth animations
-- 📝 Form pendaftaran terintegrasi dengan WhatsApp
-- 🖼️ Galeri kegiatan dengan marquee animation.
+**Made with ❤️ by UKM IT CKI**
+
+⭐ Star this repo if you find it helpful!
+
+© 2025 UKM IT CKI. All rights reserved.
+
+</div>
