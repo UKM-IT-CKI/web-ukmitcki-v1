@@ -1,10 +1,10 @@
 import React from 'react';
 import { ChevronRight, Calendar } from 'lucide-react';
 import Img1 from '../assets/Img/Pic 1.jpg'
-import Img2 from '../assets/Img/Pic 2.png'
-import Img3 from '../assets/Img/Pic 3.jpg'
+import Img2 from '../assets/Img/Pic 2.jpg'
+import Img3 from '../assets/Img/Pic 3.png'
+import Img4 from '../assets/Img/Pic 4.jpg'
 
-// Kita definisikan ActivityCard di sini
 const ActivityCard = ({ image, title, date, category }) => (
   <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 h-full border border-gray-100">
     <div className="h-48 bg-gray-200 relative overflow-hidden group">
@@ -27,18 +27,24 @@ export default function Activities() {
   const activities = [
     {
       image: Img1,
+      title: "Paswa",
+      date: "17 Desember 2024",
+      category: "Kolaborasi"
+    },
+    {
+      image: Img2,
       title: "Seminar IT",
       date: "18 Januari 2025",
       category: "Seminar"
     },
     {
-      image: Img2,
+      image: Img3,
       title: "Class & Sharing",
       date: "1 Maret 2025",
       category: "Class & Sharing"
     },
     {
-      image: Img3,
+      image: Img4,
       title: "Workshop PHP",
       date: "15 November 2025",
       category: "Workshop"
@@ -50,15 +56,15 @@ export default function Activities() {
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-end mb-12">
           <div>
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Kegiatan Terbaru</h2>
-            <p className="text-gray-600">Intip keseruan kegiatan yang baru saja kami laksanakan.</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Kegiatan</h2>
+            <p className="text-gray-600">Intip keseruan kegiatan-kegiatan yang telah kami laksanakan.</p>
           </div>
         </div>
 
-        {/* Marquee Container */}
+        {/* Kontainer Animasi Marquee */}
         <div className="relative w-full">
 
-          {/* Mobile View: Manual Scroll (Only 3 items) */}
+          {/* Tampilan Mobile */}
           <div className="md:hidden flex gap-6 overflow-x-auto pb-4 scrollbar-hide px-4">
             {activities.map((item, index) => (
               <div key={index} className="min-w-[300px] flex-shrink-0">
@@ -67,10 +73,9 @@ export default function Activities() {
             ))}
           </div>
 
-          {/* Desktop View: Auto Marquee (Many items) */}
-          {/* Desktop View: Auto Marquee (Many items) */}
+          {/* Tampilan Desktop */}
           <div className="hidden md:flex overflow-hidden py-4">
-            {/* Wrapper for seamless looping: Two identical lists */}
+            {/* Pembungkus Animasi Marquee */}
             <div className="flex shrink-0 gap-8 animate-marquee pr-8">
               {[...activities, ...activities, ...activities, ...activities, ...activities, ...activities].map((item, index) => (
                 <div key={index} className="min-w-[350px] flex-shrink-0">
@@ -86,10 +91,6 @@ export default function Activities() {
               ))}
             </div>
           </div>
-
-          {/* Gradient Fade di Kiri & Kanan */}
-          <div className="absolute top-0 left-0 w-24 h-full z-10 pointer-events-none"></div>
-          <div className="absolute top-0 right-0 w-24 h-full z-10 pointer-events-none"></div>
         </div>
       </div>
     </section>

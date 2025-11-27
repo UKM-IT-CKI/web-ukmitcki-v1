@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { ChevronRight, Loader2, Send, AlertCircle, MessageCircle } from 'lucide-react'; // 1. Wajib tambah import ini
+import { ChevronRight, Loader2, Send, AlertCircle, MessageCircle } from 'lucide-react';
 
 export default function JoinForm() {
-    // --- URL GOOGLE SCRIPT KAMU ---
+    // --- Bagian Intergarasi GOOGLE SCRIPT ---
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwLjCff1FbzApzT46pGq28_xPSQwl8wBxae2YhSr-5-L5CKoKetMkEqpFiCWQa20rE/exec";
 
     const [formData, setFormData] = useState({
@@ -17,13 +17,26 @@ export default function JoinForm() {
     });
 
     const [isLoading, setIsLoading] = useState(false);
-    const [status, setStatus] = useState(""); // "" | "success" | "error"
+    const [status, setStatus] = useState("");
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    // 2. Wajib tambah fungsi ini agar tombol WA berfungsi
+    // Bagian Form Nomor HP
+    const handlePhoneChange = (e) => {
+        const value = e.target.value;
+        const numbersOnly = value.replace(/[^0-9]/g, '');
+
+        if (numbersOnly.length <= 13) {
+            setFormData({ ...formData, noHp: numbersOnly });
+        }
+    };
+
+    const isValidPhone = (phone) => {
+        return /^08[0-9]{8,11}$/.test(phone);
+    };
+
     const handleManualWA = () => {
         const message = `Halo Humas UKM IT, saya mengalami kendala saat melakukan pendaftaran di Web UKM IT. Berikut data saya:%0a%0aNama: ${formData.nama}%0aNIM: ${formData.nim}%0aKelas: ${formData.kelas}%0aSemester: ${formData.semester}%0aProdi: ${formData.prodi}%0aEmail: ${formData.email}%0aAlasan Bergabung: ${formData.alasan}`;
         window.open(`https://wa.me/6285157730419?text=${message}`, '_blank');
@@ -35,9 +48,9 @@ export default function JoinForm() {
         setStatus("");
 
         try {
-            // 3. Logic Timeout: Jika 10 detik tidak ada respon, anggap error agar tombol WA muncul
+            // Error TimeOut
             const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 detik
+            const timeoutId = setTimeout(() => controller.abort(), 10000);
 
             await fetch(SCRIPT_URL, {
                 method: "POST",
@@ -54,7 +67,7 @@ export default function JoinForm() {
             });
         } catch (error) {
             console.error("Error:", error);
-            setStatus("error"); // Ini yang memicu tampilan error muncul
+            setStatus("error");
         } finally {
             setIsLoading(false);
         }
@@ -69,29 +82,15 @@ export default function JoinForm() {
                 <div className="bg-white/10 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl overflow-hidden">
                     <div className="grid md:grid-cols-5">
 
-                        {/* --- SISI KIRI --- */}
+                        {/* --- Bagian Kiri Form--- */}
                         <div className="p-8 md:p-12 bg-blue-800/50 md:col-span-2 flex flex-col justify-center">
                             <h2 className="text-3xl md:text-4xl font-bold mb-6">Mari Bertumbuh Bersama</h2>
                             <p className="text-blue-100 mb-8 leading-relaxed">
                                 Ayo bergabunglah dengan UKM IT Mari kita kembangkan skill, perluas relasi, dan ciptakan inovasi bersama-sama.
                             </p>
-                            {/* <ul className="space-y-4">
-                                <li className="flex items-center gap-3">
-                                    <div className="bg-blue-500 rounded-full p-1"><ChevronRight size={16} /></div>
-                                    <span className="font-medium">Mentoring Eksklusif</span>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="bg-blue-500 rounded-full p-1"><ChevronRight size={16} /></div>
-                                    <span className="font-medium">Akses Project Nyata</span>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="bg-blue-500 rounded-full p-1"><ChevronRight size={16} /></div>
-                                    <span className="font-medium">Sertifikat SKPI</span>
-                                </li>
-                            </ul> */}
                         </div>
 
-                        {/* --- SISI KANAN --- */}
+                        {/* --- Bagian Kanan Form--- */}
                         <div className="p-8 md:p-12 bg-white md:col-span-3 text-gray-800">
                             <h3 className="text-2xl font-bold mb-6 text-gray-900 border-b pb-4 text-center">Formulir Pendaftaran</h3>
 
@@ -161,12 +160,37 @@ export default function JoinForm() {
                                         />
                                     </div>
                                     <div>
-                                        <label className="block text-sm font-semibold text-gray-700 mb-1">No. WhatsApp</label>
-                                        <input type="number" name="noHp" required
-                                            value={formData.noHp} onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-                                            placeholder="08..."
+                                        <label className="block text-sm font-semibold text-gray-700 mb-1">
+                                            No. WhatsApp <span className="text-red-500">*</span>
+                                        </label>
+                                        <input
+                                            type="tel"
+                                            name="noHp"
+                                            required
+                                            value={formData.noHp}
+                                            onChange={handlePhoneChange}
+                                            className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-colors ${formData.noHp && !isValidPhone(formData.noHp)
+                                                ? 'border-red-300 bg-red-50'
+                                                : 'border-gray-200'
+                                                }`}
+                                            placeholder="08123456789"
                                         />
+                                        {formData.noHp && !isValidPhone(formData.noHp) && (
+                                            <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
+                                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                                                </svg>
+                                                Format tidak valid. Harus dimulai dengan 08 (10-13 digit)
+                                            </p>
+                                        )}
+                                        {formData.noHp && isValidPhone(formData.noHp) && (
+                                            <p className="text-xs text-green-600 mt-1 flex items-center gap-1">
+                                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                                                </svg>
+                                                Format nomor valid
+                                            </p>
+                                        )}
                                     </div>
                                 </div>
 
@@ -178,6 +202,9 @@ export default function JoinForm() {
                                         className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-none"
                                         placeholder="Ceritakan motivasi singkatmu..."
                                     ></textarea>
+                                    <p className="text-xs text-gray-500 mt-1">
+                                        {formData.alasan.length}/500 karakter
+                                    </p>
                                 </div>
 
                                 {/* --- Logic Error --- */}
@@ -217,18 +244,6 @@ export default function JoinForm() {
                                     {isLoading ? <Loader2 className="animate-spin" /> : <Send size={20} />}
                                     {isLoading ? "Sedang Mengirim..." : "Kirim Formulir Pendaftaran"}
                                 </button>
-
-                                {/* Tombol Submit Pendaftaran Ditutup */}
-                                {/* <button
-                                    type="button" onclick="closeform()"
-                                    disabled={isLoading}
-                                    className={`w-full font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-blue-500/30 flex justify-center items-center gap-2 mt-4
-                                        ${isLoading ? 'bg-gray-400 cursor-not-allowed text-gray-100' : 'bg-red-600 hover:bg-red-700 text-white hover:-translate-y-1'}
-                                    `}
-                                >
-                                    {isLoading ? <Loader2 className="animate-spin" /> : <Send size={20} />}
-                                    {isLoading ? "" : "Pendaftaran Telah Ditutup"}
-                                </button> */}
                             </form>
                         </div>
                     </div>

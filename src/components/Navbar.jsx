@@ -6,7 +6,6 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  // Efek scroll dipindah ke sini karena hanya Navbar yang butuh
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -47,7 +46,7 @@ export default function Navbar() {
           <span>UKM IT</span>
         </div>
 
-        {/* Desktop Menu */}
+        {/* Desktop Navbar */}
         <div className="hidden md:flex space-x-8">
           {navLinks.map((link) => (
             <a

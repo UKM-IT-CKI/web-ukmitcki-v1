@@ -20,7 +20,7 @@
 
 ## 📋 Tentang Project
 
-Website resmi UKM IT STIKOM CKI Jakarta. Platform ini dirancang untuk memberikan informasi tentang kegiatan, project, dan cara bergabung dengan UKM IT.
+Website UKM IT STIKOM CKI Jakarta. Platform ini dirancang untuk memberikan informasi tentang kegiatan, project, dan cara bergabung dengan UKM IT.
 
 ## 🚀 Tech Stack
 
