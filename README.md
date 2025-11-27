@@ -12,7 +12,7 @@
 
 **Membangun masa depan teknologi melalui kolaborasi mahasiswa yang kreatif dan inovatif.**
 
-[🌐 Live Demo](#) • [📖 Documentation](#) • [🐛 Report Bug](https://github.com/UKM-IT-CKI/ukm-website/issues) • [✨ Request Feature](https://github.com/UKM-IT-CKI/ukm-website/issues)
+[🌐 Live Demo](https://ukmit-cki.vercel.app/) • [🐛 Report Bug](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues) • [✨ Request Feature](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues/2)
 
 </div>
 
@@ -61,27 +61,19 @@ Website resmi Unit Kegiatan Mahasiswa Teknologi Informasi (UKM IT) STIKOM CKI Ja
 
 ## 🌐 Demo
 
-Kunjungi website kami di: **[ukm-it-cki.vercel.app](#)** _(ganti dengan URL deployment Anda)_
+Kunjungi website kami di: **[https://ukmit-cki.vercel.app/](#)**
 
 
 ### 🐛 Melaporkan Bug
 
-Jika Anda menemukan bug, silakan buat [issue baru](https://github.com/UKM-IT-CKI/ukm-website/issues) dengan:
+Jika Anda menemukan bug, silakan buat [Laporan Bug](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues) dengan:
 - Jelaskan deskripsi bug
 - Screenshot (jika memungkinkan)
 - Environment details (browser, OS, dll)
 
-## 📞 Kontak & Social Media
+## 🌐 Social Media
 
 <div align="center">
-
-### 📍 Alamat
-**Jalan Radin Inten II, Duren Sawit, Jakarta Timur**
-
-### 📧 Email
-**ukmitcki2025@gmail.com**
-
-### 🌐 Social Media
 
 [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/ukm.it_stikom/)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/UKM-IT-CKI)
@@ -90,13 +82,6 @@ Jika Anda menemukan bug, silakan buat [issue baru](https://github.com/UKM-IT-CKI
 
 </div>
 
----
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
 ## 📁 Struktur Proyek
 
 ```
@@ -127,9 +112,5 @@ ukm-website/
 <div align="center">
 
 **Made with ❤️ by UKM IT CKI**
-
-⭐ Star this repo if you find it helpful!
-
-© 2025 UKM IT CKI. All rights reserved.
 
 </div>
