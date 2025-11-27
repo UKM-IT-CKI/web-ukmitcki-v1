@@ -5,7 +5,7 @@ export default function AboutSection() {
     const DaftarMisi = [
         "Membantu mengembangkan dan mengasah talenta mahasiswa STIKOM CKI di bidang teknologi informasi melalui pembinaan yang terarah dan berkelanjutan.",
         "Berperan aktif dalam mengikuti perkembangan dunia teknologi informasi.",
-        "Membentuk lulusan yang inovatif, terampil, dan berwawasan luas, serta mampu bersaing secara global di era digital,khususnya mahasiswa STIKOM CKI sehingga menghasilkan mahasiswa yang terampil"
+        "Membantu mengembangkanlulusan yang inovatif, terampil, dan berwawasan luas, serta mampu bersaing secara global di era digital, khususnya mahasiswa STIKOM CKI sehingga menghasilkan mahasiswa yang terampil"
     ];
 
     return (
@@ -48,12 +48,12 @@ export default function AboutSection() {
                             <p className="text-gray-600 font-medium">Anggota Aktif</p>
                         </div>
                         <div className="bg-indigo-50 p-6 rounded-2xl text-center mt-8">
-                            <h3 className="text-4xl font-bold text-indigo-600 mb-2">3</h3>
+                            <h3 className="text-4xl font-bold text-indigo-600 mb-2">2</h3>
                             <p className="text-gray-600 font-medium">Project Selesai</p>
                         </div>
                         {/* <div className="bg-purple-50 p-6 rounded-2xl text-center">
                         <h3 className="text-4xl font-bold text-purple-600 mb-2">🚧</h3>
-                        <p className="text-gray-600 font-medium">Under Construction</p>
+                        <p className="text-gray-600 font-medium">Under Construction</p>roj
                     </div> */}
                         <div className="bg-pink-50 p-6 rounded-2xl text-center mt-8">
                             <h3 className="text-4xl font-bold text-pink-600 mb-2">3</h3>

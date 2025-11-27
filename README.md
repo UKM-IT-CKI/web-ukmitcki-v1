@@ -12,15 +12,15 @@
 
 **Membangun masa depan teknologi melalui kolaborasi mahasiswa yang kreatif dan inovatif.**
 
-[🌐 Live Demo](https://ukmit-cki.vercel.app/) • [🐛 Report Bug](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues) • [✨ Request Feature](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues/2)
+[🌐 Live Demo](https://ukmit-cki.vercel.app/) • [🐛 Report Bug](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues/1) • [✨ Request Feature](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues/2)
 
 </div>
 
 ---
 
-## 📋 Tentang Proyek
+## 📋 Tentang Project
 
-Website resmi Unit Kegiatan Mahasiswa Teknologi Informasi (UKM IT) STIKOM CKI Jakarta. Platform ini dirancang untuk memberikan informasi tentang kegiatan, project, dan cara bergabung dengan UKM IT.
+Website resmi UKM IT STIKOM CKI Jakarta. Platform ini dirancang untuk memberikan informasi tentang kegiatan, project, dan cara bergabung dengan UKM IT.
 
 ## 🚀 Tech Stack
 
@@ -57,7 +57,6 @@ Website resmi Unit Kegiatan Mahasiswa Teknologi Informasi (UKM IT) STIKOM CKI Ja
 - 🎭 **Smooth Animations** - Animasi yang halus dan interaktif
 - 📝 **WhatsApp Integration** - Form pendaftaran terintegrasi dengan WhatsApp
 - 🖼️ **Activity Gallery** - Galeri kegiatan dengan marquee animation
-- 🌐 **SEO Optimized** - Optimasi untuk mesin pencari
 
 ## 🌐 Demo
 
@@ -66,9 +65,9 @@ Kunjungi website kami di: **[https://ukmit-cki.vercel.app/](#)**
 
 ### 🐛 Melaporkan Bug
 
-Jika Anda menemukan bug, silakan buat [Laporan Bug](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues) dengan:
+Jika Anda menemukan bug, silakan buat [Laporan Bug](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues/1) dengan:
 - Jelaskan deskripsi bug
-- Screenshot (jika memungkinkan)
+- Screenshot jika ada
 - Environment details (browser, OS, dll)
 
 ## 🌐 Social Media
@@ -82,7 +81,7 @@ Jika Anda menemukan bug, silakan buat [Laporan Bug](https://github.com/UKM-IT-CK
 
 </div>
 
-## 📁 Struktur Proyek
+## 📁 Struktur Project
 
 ```
 
