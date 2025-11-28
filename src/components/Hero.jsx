@@ -27,10 +27,6 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-linear-to-b from-blue-900/70 to-blue-900/75"></div>
 
       <div className="container mx-auto px-6 relative z-10 text-center text-white">
-        {/* <span className="inline-block py-1 px-3 rounded-full bg-blue-500/30 border border-blue-400/50 text-sm font-medium mb-6 backdrop-blur-sm">
-          Selamat Datang Mahasiswa Baru 2025
-        </span> */}
-
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
           Wujudkan Inovasi & Kreativitas <br /> Bersama <span className="text-blue-400">UKM IT</span>
         </h1>

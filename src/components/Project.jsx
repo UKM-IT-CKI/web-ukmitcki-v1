@@ -94,7 +94,7 @@ export default function Showcase() {
       title: "Fun Photobooth",
       description: "Aplikasi web interaktif untuk membuat foto strip bergaya photobox langsung dari browser.",
       githubUrl: "https://github.com/UKM-IT-CKI/Photobooth",
-      linkUrl: "https://ukmitphotoboothproject.vercel.app/"
+      linkUrl: "https://ukmit-funphotobooth.vercel.app/"
     },
     {
       image: Project2,
