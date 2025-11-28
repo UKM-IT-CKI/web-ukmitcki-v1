@@ -31,7 +31,7 @@ export default function HeroSection() {
           Wujudkan Inovasi & Kreativitas <br /> Bersama <span className="text-blue-400">UKM IT</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          Komunitas pengembangan minat dan bakat mahasiswa di bidang Teknologi Informasi dan Inovasi Digital
+          Organisasi pengembangan minat dan bakat mahasiswa di bidang Teknologi Informasi dan Inovasi Digital STIKOM CKI
         </p>
         <div className="flex flex-col md:flex-row justify-center gap-4">
           <a
