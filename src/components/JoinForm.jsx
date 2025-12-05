@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { ChevronRight, Loader2, Send, AlertCircle, MessageCircle } from 'lucide-react';
 
 export default function JoinForm() {
-    // --- Bagian Intergarasi GOOGLE SCRIPT ---
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwLjCff1FbzApzT46pGq28_xPSQwl8wBxae2YhSr-5-L5CKoKetMkEqpFiCWQa20rE/exec";
+
+    const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
 
     const [formData, setFormData] = useState({
         nama: "",
@@ -48,23 +49,24 @@ export default function JoinForm() {
         setStatus("");
 
         try {
-            // Error TimeOut
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 10000);
-
-            await fetch(SCRIPT_URL, {
+            // Fetch ke API Vercel kita sendiri (lokal path)
+            const response = await fetch("/api/submit", {
                 method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
                 body: JSON.stringify(formData),
-                mode: "no-cors",
-                signal: controller.signal
             });
 
-            clearTimeout(timeoutId);
-            setStatus("success");
-            setFormData({
-                nama: "", nim: "", kelas: "", semester: "",
-                prodi: "Teknik Informatika", email: "", noHp: "", alasan: ""
-            });
+            if (response.ok) {
+                setStatus("success");
+                setFormData({
+                    nama: "", nim: "", kelas: "", semester: "",
+                    prodi: "Teknik Informatika", email: "", noHp: "", alasan: ""
+                });
+            } else {
+                throw new Error("Gagal mengirim");
+            }
         } catch (error) {
             console.error("Error:", error);
             setStatus("error");
@@ -100,7 +102,8 @@ export default function JoinForm() {
                                     <label className="block text-sm font-semibold text-gray-700 mb-1">Nama Lengkap</label>
                                     <input type="text" name="nama" required
                                         value={formData.nama} onChange={handleChange}
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                                        disabled={!isRegistrationOpen}
+                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                                         placeholder="Masukan Nama Lengkap"
                                     />
                                 </div>
@@ -111,14 +114,16 @@ export default function JoinForm() {
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">NIM</label>
                                         <input type="text" name="nim" required
                                             value={formData.nim} onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                                            disabled={!isRegistrationOpen}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none disabled:opacity-50 disabled:cursor-not-allowed"
                                             placeholder="24120..."
                                         />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Program Studi</label>
                                         <select name="prodi" value={formData.prodi} onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                            disabled={!isRegistrationOpen}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none disabled:opacity-50 disabled:cursor-not-allowed">
                                             <option>Teknik Informatika</option>
                                             <option>Sistem Informasi</option>
                                             <option>Bisnis Digital</option>
@@ -132,14 +137,16 @@ export default function JoinForm() {
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Kelas</label>
                                         <input type="text" name="kelas" required
                                             value={formData.kelas} onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                                            disabled={!isRegistrationOpen}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none disabled:opacity-50 disabled:cursor-not-allowed"
                                             placeholder="Pagi / Malam"
                                         />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Semester</label>
                                         <select name="semester" value={formData.semester} onChange={handleChange} required
-                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
+                                            disabled={!isRegistrationOpen}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none disabled:opacity-50 disabled:cursor-not-allowed">
                                             <option value="">Pilih Semester</option>
                                             <option value="1">Semester 1</option>
                                             <option value="3">Semester 3</option>
@@ -155,7 +162,8 @@ export default function JoinForm() {
                                         <label className="block text-sm font-semibold text-gray-700 mb-1">Email</label>
                                         <input type="email" name="email" required
                                             value={formData.email} onChange={handleChange}
-                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
+                                            disabled={!isRegistrationOpen}
+                                            className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none disabled:opacity-50 disabled:cursor-not-allowed"
                                             placeholder="nama@email.com"
                                         />
                                     </div>
@@ -169,7 +177,8 @@ export default function JoinForm() {
                                             required
                                             value={formData.noHp}
                                             onChange={handlePhoneChange}
-                                            className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-colors ${formData.noHp && !isValidPhone(formData.noHp)
+                                            disabled={!isRegistrationOpen}
+                                            className={`w-full px-4 py-3 bg-gray-50 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-colors disabled:opacity-50 disabled:cursor-not-allowed ${formData.noHp && !isValidPhone(formData.noHp)
                                                 ? 'border-red-300 bg-red-50'
                                                 : 'border-gray-200'
                                                 }`}
@@ -199,7 +208,8 @@ export default function JoinForm() {
                                     <label className="block text-sm font-semibold text-gray-700 mb-1">Alasan Bergabung UKM IT</label>
                                     <textarea name="alasan" required rows="3"
                                         value={formData.alasan} onChange={handleChange}
-                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-none"
+                                        disabled={!isRegistrationOpen}
+                                        className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none resize-none disabled:opacity-50 disabled:cursor-not-allowed"
                                         placeholder="Ceritakan motivasi singkatmu..."
                                     ></textarea>
                                     <p className="text-xs text-gray-500 mt-1">
@@ -233,16 +243,35 @@ export default function JoinForm() {
                                     </div>
                                 )}
 
-                                {/* Tombol Submit Pendaftaran Dibuka */}
+                                {/* Tombol Submit */}
                                 <button
                                     type="submit"
-                                    disabled={isLoading}
-                                    className={`w-full font-bold py-4 rounded-xl transition-all shadow-lg hover:shadow-blue-500/30 flex justify-center items-center gap-2 mt-4
-                                        ${isLoading ? 'bg-gray-400 cursor-not-allowed text-gray-100' : 'bg-blue-600 hover:bg-blue-700 text-white hover:-translate-y-1'}
+                                    disabled={isLoading || !isRegistrationOpen}
+                                    className={`w-full font-bold py-4 rounded-xl transition-all shadow-lg flex justify-center items-center gap-2 mt-4
+                                        ${!isRegistrationOpen
+                                            ? 'bg-red-500 cursor-not-allowed text-white'
+                                            : isLoading
+                                                ? 'bg-gray-400 cursor-not-allowed text-gray-100'
+                                                : 'bg-blue-600 hover:bg-blue-700 text-white hover:-translate-y-1 hover:shadow-blue-500/30'
+                                        }
                                     `}
                                 >
-                                    {isLoading ? <Loader2 className="animate-spin" /> : <Send size={20} />}
-                                    {isLoading ? "Sedang Mengirim..." : "Kirim Formulir Pendaftaran"}
+                                    {!isRegistrationOpen ? (
+                                        <>
+                                            <AlertCircle size={20} />
+                                            Pendaftaran Telah Ditutup
+                                        </>
+                                    ) : isLoading ? (
+                                        <>
+                                            <Loader2 className="animate-spin" />
+                                            Sedang Mengirim...
+                                        </>
+                                    ) : (
+                                        <>
+                                            <Send size={20} />
+                                            Kirim Formulir Pendaftaran
+                                        </>
+                                    )}
                                 </button>
                             </form>
                         </div>
