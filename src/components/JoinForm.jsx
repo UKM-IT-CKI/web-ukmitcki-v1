@@ -4,14 +4,14 @@ import { ChevronRight, Loader2, Send, AlertCircle, MessageCircle } from 'lucide-
 export default function JoinForm() {
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwLjCff1FbzApzT46pGq28_xPSQwl8wBxae2YhSr-5-L5CKoKetMkEqpFiCWQa20rE/exec";
 
-    const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
+    const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
     const [formData, setFormData] = useState({
         nama: "",
         nim: "",
         kelas: "",
         semester: "",
-        prodi: "Sistem Informasi",
+        prodi: "Teknik Informatika",
         email: "",
         noHp: "",
         alasan: ""
@@ -49,7 +49,7 @@ export default function JoinForm() {
         setStatus("");
 
         try {
-            // Fetch ke API Vercel kita sendiri (lokal path)
+            // Bagian Fetch ke API Vercel
             const response = await fetch("/api/submit", {
                 method: "POST",
                 headers: {
