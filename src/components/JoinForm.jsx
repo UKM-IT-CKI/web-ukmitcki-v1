@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { ChevronRight, Loader2, Send, AlertCircle, MessageCircle } from 'lucide-react';
 
 export default function JoinForm() {
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwLjCff1FbzApzT46pGq28_xPSQwl8wBxae2YhSr-5-L5CKoKetMkEqpFiCWQa20rE/exec";
-
     const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
     const [formData, setFormData] = useState({
