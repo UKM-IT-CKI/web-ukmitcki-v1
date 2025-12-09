@@ -72,7 +72,7 @@ const PengurusCard = React.memo(({ pengurus, position, isCenter }) => {
                     style={{
                         filter: isCenter ? 'brightness(100%)' : 'brightness(50%)',
                     }}
-                    loading="lazy"
+                    loading="eager"
                 />
 
                 <div
