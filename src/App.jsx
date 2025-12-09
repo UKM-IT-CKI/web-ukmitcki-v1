@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './components/Hero';
 import About from './components/About';
+import Pengurus from './components/Pengurus';
 import Project from './components/Project';
 import Activities from './components/Activities';
 import JoinForm from './components/JoinForm';
@@ -19,6 +20,9 @@ export default function App() {
 
       {/* Tentang Kami */}
       <About />
+
+      {/* Pengurus */}
+      <Pengurus />
 
       {/* Project */}
       <Project />
