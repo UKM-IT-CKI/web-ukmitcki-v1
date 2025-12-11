@@ -209,24 +209,24 @@ export default function Pengurus() {
             ]
         },
         {
-            id: 5,
-            image: img5,
-            name: "Mohammad Tyo Ari Novianto",
+            id: 6,
+            image: img6,
+            name: "Reykha Adelia Azzahra",
             division: "Bendahara I",
-            // position: "BENDAHARA I",",
-            instagram: "https://www.instagram.com/tyoooo.to/",
+            // position: "BENDAHARA II",
+            instagram: "https://www.instagram.com/reykhazahra/",
             platforms: [
                 { name: 'Web', active: true },
                 { name: 'Mobile', active: true },
             ]
         },
         {
-            id: 6,
-            image: img6,
-            name: "Reykha Adelia Azzahra",
+            id: 5,
+            image: img5,
+            name: "Mohammad Tyo Ari Novianto",
             division: "Bendahara II",
-            // position: "BENDAHARA II",
-            instagram: "https://www.instagram.com/reykhazahra/",
+            // position: "BENDAHARA I",",
+            instagram: "https://www.instagram.com/tyoooo.to/",
             platforms: [
                 { name: 'Web', active: true },
                 { name: 'Mobile', active: true },
