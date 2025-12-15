@@ -1,5 +1,5 @@
 import React from 'react';
-import Img from '../assets/Img/Pic 2.jpg'
+import Img from '../assets/Img/Pic 2.webp'
 
 export default function HeroSection() {
   const handleNavClick = (e, href) => {

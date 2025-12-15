@@ -1,9 +1,9 @@
 import React from 'react';
 import { ChevronRight, Calendar } from 'lucide-react';
-import Img1 from '../assets/Img/Pic 1.jpg'
-import Img2 from '../assets/Img/Pic 2.jpg'
-import Img3 from '../assets/Img/Pic 3.png'
-import Img4 from '../assets/Img/Pic 4.jpg'
+import Img1 from '../assets/Img/Pic 1.webp'
+import Img2 from '../assets/Img/Pic 2.webp'
+import Img3 from '../assets/Img/Pic 3.webp'
+import Img4 from '../assets/Img/Pic 4.webp'
 
 const ActivityCard = ({ image, title, date, category }) => (
   <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:-translate-y-2 transition-transform duration-300 h-full border border-gray-100">

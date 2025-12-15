@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect, useMemo, useCallback } from 'react';
 import { ChevronLeft, ChevronRight, Instagram } from 'lucide-react';
-import img1 from '../assets/Img/Ketua.png'
-import img2 from '../assets/Img/Wakil.png'
-import img3 from '../assets/Img/Sekretaris_1.png'
-import img4 from '../assets/Img/Sekretaris_2.png'
-import img5 from '../assets/Img/Bendahara_1.png'
-import img6 from '../assets/Img/Bendahara_2.png'
-import img7 from '../assets/Img/Humas_1.png'
-import img8 from '../assets/Img/Humas_2.png'
+import img1 from '../assets/Img/Ketua.webp'
+import img2 from '../assets/Img/Wakil.webp'
+import img3 from '../assets/Img/Sekretaris_1.webp'
+import img4 from '../assets/Img/Sekretaris_2.webp'
+import img5 from '../assets/Img/Bendahara_1.webp'
+import img6 from '../assets/Img/Bendahara_2.webp'
+import img7 from '../assets/Img/Humas_1.webp'
+import img8 from '../assets/Img/Humas_2.webp'
 
 // --- KOMPONEN FITUR CARD ---
 const PengurusCard = React.memo(({ pengurus, position, isCenter }) => {
@@ -209,11 +209,11 @@ export default function Pengurus() {
             ]
         },
         {
-            id: 6,
-            image: img6,
+            id: 5,
+            image: img5,
             name: "Reykha Adelia Azzahra",
             division: "Bendahara I",
-            // position: "BENDAHARA II",
+            // position: "BENDAHARA I",
             instagram: "https://www.instagram.com/reykhazahra/",
             platforms: [
                 { name: 'Web', active: true },
@@ -221,11 +221,11 @@ export default function Pengurus() {
             ]
         },
         {
-            id: 5,
-            image: img5,
+            id: 6,
+            image: img6,
             name: "Mohammad Tyo Ari Novianto",
             division: "Bendahara II",
-            // position: "BENDAHARA I",",
+            // position: "BENDAHARA II",
             instagram: "https://www.instagram.com/tyoooo.to/",
             platforms: [
                 { name: 'Web', active: true },
@@ -258,7 +258,7 @@ export default function Pengurus() {
         },
     ], []);
 
-    // Auto-play carousel with cleanup
+    // Carousel
     useEffect(() => {
         if (!isAutoPlaying) return;
 

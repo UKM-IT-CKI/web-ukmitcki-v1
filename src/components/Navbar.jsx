@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import Img from '../assets/Img/Logo_UKMIT.png'
+import Img from '../assets/Img/Logo_UKMIT.webp'
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { Github, ChevronLeft, ChevronRight, Link } from 'lucide-react';
-import Project1 from '../assets/Img/Project1.png';
-import Project2 from '../assets/Img/Project2.png';
-import Maintence from '../assets/Img/under_maintenance.png';
+import Project1 from '../assets/Img/Project1.webp';
+import Project2 from '../assets/Img/Project2.webp';
+import Maintence from '../assets/Img/under_maintenance.webp';
 
 // --- KOMPONEN KARTU PROYEK ---
 const ProjectCard = ({ image, title, category, description, githubUrl, linkUrl }) => (

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Globe, MapPin, Mail, Instagram, Github } from 'lucide-react';
-import Img from '../assets/Img/Logo_UKMIT.png'
+import Img from '../assets/Img/Logo_UKMIT.webp'
 
 // SVG Icon Discord
 const DiscordIcon = ({ size = 18 }) => (
