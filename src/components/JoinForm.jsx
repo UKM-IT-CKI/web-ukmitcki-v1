@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ChevronRight, Loader2, Send, AlertCircle, MessageCircle } from 'lucide-react';
 
 export default function JoinForm() {
-    const [isRegistrationOpen, setIsRegistrationOpen] = useState(true);
+    const [isRegistrationOpen, setIsRegistrationOpen] = useState(false);
 
     const [formData, setFormData] = useState({
         nama: "",
