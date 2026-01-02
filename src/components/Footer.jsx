@@ -115,7 +115,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="border-t border-gray-800 pt-8 text-center text-sm">
-                    &copy; 2025 UKM IT CKI. All rights reserved.
+                    &copy; 2026 UKM IT CKI. All rights reserved.
                 </div>
             </div>
         </footer>
