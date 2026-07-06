@@ -258,7 +258,7 @@ export default function Pengurus() {
             id: 10,
             image: img10,
             name: "Piyozi Pandaiko",
-            division: "Keilmuan 1",
+            division: "Keilmuan I",
             platforms: [
                 { name: 'Web', active: true },
                 { name: 'Mobile', active: true },
@@ -268,7 +268,7 @@ export default function Pengurus() {
             id: 11,
             image: img11,
             name: "Okha Rizky Pratama",
-            division: "Keilmuan 2",
+            division: "Keilmuan II",
             platforms: [
                 { name: 'Web', active: true },
                 { name: 'Mobile', active: true },
@@ -278,7 +278,7 @@ export default function Pengurus() {
             id: 12,
             image: img12,
             name: "Muhammad Talkhis Al Rawi",
-            division: "Keilmuan 3",
+            division: "Keilmuan III",
             platforms: [
                 { name: 'Web', active: true },
                 { name: 'Mobile', active: true },
