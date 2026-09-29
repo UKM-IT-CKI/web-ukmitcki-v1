@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Website UKM IT CKI
+# Website UKM IT CKI
 
 ### Unit Kegiatan Mahasiswa Teknologi Informasi
 
@@ -18,11 +18,11 @@
 
 ---
 
-## 📋 Tentang Project
+## Tentang Project
 
 Website UKM IT STIKOM CKI Jakarta. Platform ini dirancang untuk memberikan informasi tentang kegiatan, project, dan cara bergabung dengan UKM IT.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 <table>
   <tr>
@@ -51,26 +51,14 @@ Website UKM IT STIKOM CKI Jakarta. Platform ini dirancang untuk memberikan infor
 
 ## ✨ Fitur
 
-- 🎨 **Modern Design** - UI/UX yang modern dan menarik
-- 📱 **Responsive** - Tampilan optimal di semua perangkat
-- ⚡ **Fast Loading** - Optimasi performa dengan Vite
-- 🎭 **Smooth Animations** - Animasi yang halus dan interaktif
-- 📝 **WhatsApp Integration** - Form pendaftaran terintegrasi dengan WhatsApp
-- 🖼️ **Activity Gallery** - Galeri kegiatan dengan marquee animation
+- **Modern Design** - UI/UX yang modern dan menarik
+- **Responsive** - Tampilan optimal di semua perangkat
+- **Fast Loading** - Optimasi performa dengan Vite
+- **Smooth Animations** - Animasi yang halus dan interaktif
+- **WhatsApp Integration** - Form pendaftaran terintegrasi dengan WhatsApp
+- **Activity Gallery** - Galeri kegiatan dengan marquee animation
 
-## 🌐 Demo
-
-Kunjungi website kami di: **[https://ukmit-cki.vercel.app/](#)**
-
-
-### 🐛 Melaporkan Bug
-
-Jika Anda menemukan bug, silakan buat [Laporan Bug](https://github.com/UKM-IT-CKI/web-ukmitcki-v1/issues/1) dengan:
-- Jelaskan deskripsi bug
-- Screenshot jika ada
-- Environment details (browser, OS, dll)
-
-## 🌐 Social Media
+## Social Media
 
 <div align="center">
 
@@ -81,7 +69,7 @@ Jika Anda menemukan bug, silakan buat [Laporan Bug](https://github.com/UKM-IT-CK
 
 </div>
 
-## 📁 Struktur Project
+## Struktur Project
 
 ```
 

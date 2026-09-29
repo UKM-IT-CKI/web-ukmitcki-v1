@@ -5,6 +5,10 @@ export default async function handler(req, res) {
 
     const GOOGLE_SCRIPT_URL = process.env.GOOGLE_SCRIPT_URL;
 
+    if (!GOOGLE_SCRIPT_URL) {
+        return res.status(500).json({ status: 'error', message: 'GOOGLE_SCRIPT_URL is not configured' });
+    }
+
     try {
         const response = await fetch(GOOGLE_SCRIPT_URL, {
             method: 'POST',
@@ -13,6 +17,12 @@ export default async function handler(req, res) {
             },
             body: JSON.stringify(req.body),
         });
+
+        const result = await response.json();
+
+        if (!response.ok || result.status !== 'success') {
+            return res.status(502).json({ status: 'error', message: result.message || 'Google Sheets rejected the submission' });
+        }
 
         return res.status(200).json({ status: 'success' });
     } catch (error) {

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import { Github, ChevronLeft, ChevronRight, Link } from 'lucide-react';
 import Project1 from '../assets/Img/Project1.webp';
 import Project2 from '../assets/Img/Project2.webp';
+import Project3 from '../assets/Img/Project3.webp';
 import Maintence from '../assets/Img/under_maintenance.webp';
 
 // --- KOMPONEN KARTU PROYEK ---
@@ -100,17 +101,17 @@ export default function Showcase() {
       image: Project2,
       category: "Computer Vision",
       title: "Finger Counter",
-      description: "Program berbasis web mendeteksi gerakan tangan lalu menghitung jumlah jari, dan memberikan umpan balik audio secara langsung.",
+      description: "Aplikasi berbasis web mendeteksi gerakan tangan lalu menghitung jumlah jari, dan memberikan umpan balik audio secara langsung.",
       githubUrl: "https://github.com/UKM-IT-CKI/Finger-Counter.git",
       linkUrl: "https://ukmit-finger-counter.streamlit.app/"
     },
     {
-      image: Maintence,
-      category: "Coming Soon",
-      title: "On Progress",
-      description: "Coming Soon",
-      githubUrl: "#",
-      linkUrl: ""
+      image: Project3,
+      category: "Computer Vision",
+      title: "Puzzle Cam",
+      description: "Aplikasi web photobooth dan puzzle interaktif berbasis AI Hand Gesture Recognition yang berjalan di browser, tanpa instalasi dependensi, dan dapat diakses langsung oleh siapa saja.",
+      githubUrl: "https://github.com/UKM-IT-CKI/PuzzleCam.git",
+      linkUrl: "https://puzzlecam-beige.vercel.app/"
     },
     {
       image: Maintence,

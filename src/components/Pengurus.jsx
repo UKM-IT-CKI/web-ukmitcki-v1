@@ -11,7 +11,6 @@ import img8 from '../assets/Img/Humas_2.webp'
 import img9 from '../assets/Img/Humas_3.webp'
 import img10 from '../assets/Img/Keilmuan_1.webp'
 import img11 from '../assets/Img/Keilmuan_2.webp'
-import img12 from '../assets/Img/Keilmuan_3.webp'
 
 // --- KOMPONEN FITUR CARD ---
 const PengurusCard = React.memo(({ pengurus, position, isCenter }) => {
@@ -187,7 +186,7 @@ export default function Pengurus() {
         {
             id: 3,
             image: img3,
-            name: "Novia Faradina Zahra",
+            name: "Okha Rizky Pratama",
             division: "Sekretaris I",
             platforms: [
                 { name: 'Web', active: true },
@@ -267,18 +266,8 @@ export default function Pengurus() {
         {
             id: 11,
             image: img11,
-            name: "Okha Rizky Pratama",
-            division: "Keilmuan II",
-            platforms: [
-                { name: 'Web', active: true },
-                { name: 'Mobile', active: true },
-            ]
-        },
-        {
-            id: 12,
-            image: img12,
             name: "Muhammad Talkhis Al Rawi",
-            division: "Keilmuan III",
+            division: "Keilmuan II",
             platforms: [
                 { name: 'Web', active: true },
                 { name: 'Mobile', active: true },
